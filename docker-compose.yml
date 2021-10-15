@@ -1,7 +1,7 @@
 version: '3'
 services:
      androidlink: 
-        image: 172.21.73.160/eidevice/apphub-repo-single-dev:v1.1.1
+        image: edgesolution/single-repo:v1.0.2
         restart: always
         depends_on:
                 - db
