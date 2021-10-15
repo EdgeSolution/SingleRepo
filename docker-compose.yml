@@ -1,0 +1,58 @@
+version: '3'
+services:
+     androidlink: 
+        image: 172.21.73.160/eidevice/apphub-repo-single-dev:v1.1.1
+        restart: always
+        depends_on:
+                - db
+        volumes:
+                - /sys:/sys
+                - ./repo/license:/root/adv/repo/license
+                - ./repo/logs:/root/adv/repo/logs
+        ports:
+                - "8081:8081"
+                - "30001:30001"
+        environment:
+           TZ: "Asia/Shanghai"
+           DATABASE_TYPE: sqlite3
+           datacenter: local
+           subscriptionId: "123"
+           company: "123"
+           CHECK_LOCAL_HOST: "true"
+
+        command: /root/adv/run.sh
+        container_name: apphub
+        networks: 
+                - advnet
+     db:
+        image: edgesolution/apphub-postgres:v1.0
+        restart: always
+        ports:
+                - "5432:5432"
+        command:
+                - "postgres"
+                - "-c"
+                - "max_connections=500"
+                - "-c"
+                - "shared_buffers=1024MB"
+                - "-c"
+                - "work_mem=131072"
+        container_name: m2m-postgresSQL
+        networks: 
+              - advnet
+     minio:
+        image: edgesolution/apphub-minio:v1.0
+        restart: always
+        ports:
+                - "9000:9000"
+        command: server /data
+        container_name: minio
+        networks:
+                - advnet
+networks:
+    advnet:
+        driver: bridge
+        ipam:
+             driver: default
+             config:
+                    - subnet: 172.240.10.0/24
