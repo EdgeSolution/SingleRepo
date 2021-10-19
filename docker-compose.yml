@@ -6,8 +6,8 @@ services:
         depends_on:
                 - db
         volumes:
+                - ./license:/root/adv/license
                 - /sys:/sys
-                - ./repo/license:/root/adv/repo/license
                 - ./repo/logs:/root/adv/repo/logs
         ports:
                 - "8081:8081"
