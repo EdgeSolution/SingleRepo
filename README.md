@@ -1,10 +1,10 @@
 # Introduction In English(英文说明)
 Deploy to On-premise Linux server，local VM or cloud VM SOP
 ## 1. Login your Linux Enviroment, Suppoort On-premise Linux server， VM or cloud VM ，for Example, VM on Alibaba cloud or Microsoft Azure
-Requirement for AppHub：
-CPU >= 1vCPU
-Memory >= 2G
-Storage >= 20G
+Requirement for AppHub：<br>
+CPU >= 1vCPU<br>
+Memory >= 2G<br>
+Storage >= 20G<br>
 Image: Ubuntu 18.04 64-bit or new（Other Linux have not test and verification）
 
 ## 2.Open the following port: 
@@ -38,10 +38,10 @@ http://ServerIP:8080
 部署到Linux主机或者虚拟机步骤
 ## 1．	首先需要在搭建一个Linux环境，可以只本地的服务器，虚拟机，或者云平台上申请基于虚拟机，比如阿里云或者微软云上的VM虚拟机
 我们已经有验证过本地服务器，阿里云和微软Azure云虚拟机，系统是基于Ubuntu 18.04 X64的。建议使用Ubuntu 18.04 X64或以上版本。
-建议配置
-CPU >= 1vCPU
-Memory >= 2G
-Storage >= 20G
+建议配置:<br>
+CPU >= 1vCPU<br>
+Memory >= 2G<br>
+Storage >= 20G<br>
 Image: Ubuntu 18.04 64-bit 或者更高版本（其他Linux理论上也可以支持，但未经过验证）
 
 ## 2．	开放如下的端口：
