@@ -59,7 +59,7 @@ $ docker-compose  version
 ## 4．	使用git命令下载AppHub repo的安装文件
 $ git clone https://github.com/EdgeSolution/SingleRepo.git
 
-## 5．	安装和启动AppHub
+## 5．	安装和启动AppHub Repo server
 当你通过git下载到安装文件后，Linux中会生成“AppHub-VM-Cloud” 目录，进入该目前，执行 start.sh 脚本。
 $ cd SingleRepo/              
 $ chmod +x  start.sh                 
