@@ -74,4 +74,4 @@ SeverIP就是VM对外的公网IP地址。
 
 | Release version  | DockerHub |    docker tag    |
 | :------------------- | :-------------- | :----------|
-|     V1.0.2         | edgesolution/single-repo:v1.0.2<br />edgesolution/apphub-postgres:v1.0<br />edgesolution/apphub-minio:v1.0 | eidevice/apphub-repo-single-dev:v1.1.3 <br />eidevice/androiddm-postgres-dev:v1.1<br />eidevice/androiddm-minio-dev:v1.1<br /> |
+|     V1.0.3         | edgesolution/single-repo:v1.0.3<br />edgesolution/apphub-postgres:v1.0<br />edgesolution/apphub-minio:v1.0 | eidevice/apphub-repo-single-dev:v1.2.3 <br />eidevice/androiddm-postgres-dev:v1.1<br />eidevice/androiddm-minio-dev:v1.1<br /> |

@@ -1,7 +1,7 @@
 version: '3'
 services:
      androidlink: 
-        image: edgesolution/single-repo:v1.0.2
+        image: edgesolution/single-repo:v1.0.3
         restart: always
         depends_on:
                 - db
@@ -19,7 +19,8 @@ services:
            subscriptionId: "123"
            company: "123"
            CHECK_LOCAL_HOST: "true"
-
+        env_file:
+                - ./.env
         command: /root/adv/run.sh
         container_name: apphub
         networks: 
@@ -37,6 +38,8 @@ services:
                 - "shared_buffers=1024MB"
                 - "-c"
                 - "work_mem=131072"
+        env_file:
+                - ./.env
         container_name: m2m-postgresSQL
         networks: 
               - advnet
@@ -49,6 +52,17 @@ services:
         container_name: minio
         networks:
                 - advnet
+     dockertools:
+        image: portainer/portainer
+        restart: always
+        volumes: 
+                - /var/run/docker.sock:/var/run/docker.sock
+                - ./portainer_data:/data
+        ports: 
+                - "8001:8000"
+                - "9001:9000"
+        container_name: portainer
+
 networks:
     advnet:
         driver: bridge
