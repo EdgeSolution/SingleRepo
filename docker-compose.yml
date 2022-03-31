@@ -22,7 +22,7 @@ services:
         env_file:
                 - ./.env
         command: /root/adv/run.sh
-        container_name: apphub
+        container_name: apphub-repo
         networks: 
                 - advnet
      db:
