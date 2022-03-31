@@ -17,6 +17,7 @@ func_randompasswd()
 		chmod 777 singlerepo_random_string && cp singlerepo_random_string /bin/ -f
 		/bin/singlerepo_random_string |grep POSTGRES_PASSWORD >> .env
 		echo "CUSTOM_FLAG=1" >> .env
+		cp .env   /bin/ -f
 		return 0
 	else
 		#echo "flag=$flag"
