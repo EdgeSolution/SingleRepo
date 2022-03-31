@@ -29,8 +29,9 @@ func_readip()
 	if [ ! -x /bin/updatepostgressql ];then
 		echo "[ Copy file ... ]"
 		dpkg -i libpq5_10.17-0ubuntu0.18.04.1_amd64.deb
-		chmod 777 updatepostgressql ethhotplug eth_hotplug
+		chmod 777 updatepostgressql update_postgressql_single_repo ethhotplug eth_hotplug
 		cp updatepostgressql  /bin/ -f
+		cp update_postgressql_single_repo  /bin/ -f
 		cp ethhotplug   /bin/ -f
 		cp eth_hotplug  /bin/ -f
 		cp update-postgressql.service  /lib/systemd/system/ -f
